@@ -27,55 +27,85 @@ import redisIcon from "@/assets/Redis.png";
 import nginxIcon from "@/assets/Nginx.png";
 import viteIcon from "@/assets/Vite.js.png";
 
-const skills = [
-  { name: "JavaScript", icon: jsIcon },
-  { name: "TypeScript", icon: tsIcon },
-  { name: "Python", icon: pyIcon },
-  { name: "C++", icon: cppIcon },
-  { name: "HTML5", icon: htmlIcon },
-  { name: "CSS3", icon: cssIcon },
-  { name: "React", icon: reactIcon },
-  { name: "Node.js", icon: nodejsIcon },
-  { name: "Express", icon: expressIcon },
-  { name: "Tailwind CSS", icon: tailwindIcon },
-  { name: "Astro", icon: astroIcon },
-  { name: "Vite.js", icon: viteIcon },
-  { name: "Docker", icon: dockerIcon },
-  { name: "Postman", icon: postmanIcon },
-  { name: "Linux", icon: linuxIcon },
-  { name: "Ubuntu", icon: ubuntuIcon },
-  { name: "Git", icon: gitIcon },
-  { name: "GitHub", icon: githubIcon },
-  { name: "Figma", icon: figmaIcon },
-  { name: "Jest", icon: jestIcon },
-  { name: "MySQL", icon: mysqlIcon },
-  { name: "Redis", icon: redisIcon },
-  { name: "Nginx", icon: nginxIcon },
-  { name: "Vercel", icon: vercelIcon },
-  { name: "VS Code", icon: vscodeIcon },
+const skillGroups = [
+  {
+    name: "Lenguajes",
+    skills: [
+      { name: "JavaScript", icon: jsIcon },
+      { name: "TypeScript", icon: tsIcon },
+      { name: "Python", icon: pyIcon },
+      { name: "C++", icon: cppIcon },
+      { name: "HTML5", icon: htmlIcon },
+      { name: "CSS3", icon: cssIcon },
+    ],
+  },
+  {
+    name: "Frontend",
+    skills: [
+      { name: "React", icon: reactIcon },
+      { name: "Vite.js", icon: viteIcon },
+      { name: "Astro", icon: astroIcon },
+      { name: "Tailwind CSS", icon: tailwindIcon },
+    ],
+  },
+  {
+    name: "Backend y datos",
+    skills: [
+      { name: "Node.js", icon: nodejsIcon },
+      { name: "Express", icon: expressIcon },
+      { name: "MySQL", icon: mysqlIcon },
+      { name: "Redis", icon: redisIcon },
+    ],
+  },
+  {
+    name: "Seguridad y DevOps",
+    skills: [
+      { name: "Docker", icon: dockerIcon },
+      { name: "Nginx", icon: nginxIcon },
+      { name: "Git", icon: gitIcon },
+      { name: "GitHub", icon: githubIcon },
+      { name: "Linux", icon: linuxIcon },
+      { name: "Ubuntu", icon: ubuntuIcon },
+      { name: "Postman", icon: postmanIcon },
+    ],
+  },
+  {
+    name: "Herramientas",
+    skills: [
+      { name: "Jest", icon: jestIcon },
+      { name: "VS Code", icon: vscodeIcon },
+      { name: "Vercel", icon: vercelIcon },
+      { name: "Figma", icon: figmaIcon },
+    ],
+  },
 ];
 ---
 
 <section id="lenguajes" class="scroll-mt-20">
   <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
-    <SectionTitle id="titulo-lenguajes" title="Lenguajes de Programación" />
-    <div
-      class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5 mt-8"
-    >
+    <SectionTitle id="titulo-lenguajes" title="Stack Tecnológico" />
+    <div class="mt-8 flex flex-col gap-8">
       {
-        skills.map((skill) => (
-          <div class="group flex flex-col items-center gap-2.5 rounded-md border border-border bg-secondary px-4 py-6 text-center transition-all duration-200 hover:-translate-y-1 hover:border-accent">
-            <Image
-              src={skill.icon}
-              alt={`Logo del lenguaje ${skill.name}`}
-              width={40}
-              height={40}
-              class="w-10 h-10 object-contain"
-              loading="lazy"
-              decoding="async"
-              format="avif"
-            />
-            <p class="font-mono text-sm">{skill.name}</p>
+        skillGroups.map((group) => (
+          <div>
+            <h3 class="mb-4 font-mono text-sm text-accent">{group.name}</h3>
+            <div class="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              {group.skills.map((skill) => (
+                <div class="group flex flex-col items-center gap-2.5 rounded-md border border-border bg-secondary px-4 py-6 text-center transition-all duration-200 hover:-translate-y-1 hover:border-accent">
+                  <Image
+                    src={skill.icon}
+                    alt={`Logo de ${skill.name}`}
+                    width={40}
+                    height={40}
+                    class="w-10 h-10 object-contain"
+                    loading="lazy"
+                    decoding="async"
+                    format="avif"
+                  />
+                  <p class="font-mono text-sm">{skill.name}</p>
+                </div>
+              ))}
+            </div>
           </div>
         ))
       }
