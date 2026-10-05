@@ -8,6 +8,7 @@ export const siteConfig = {
   ogImage: '/TemporalPortfolioWeb/assets/ryuhei-logo.png',
   themeColor: '#000000',
   links: {
+    linkedin: 'https://www.linkedin.com/in/ryuhei-rg/',
     github: 'https://github.com/RyuheiRG',
   },
   author: {

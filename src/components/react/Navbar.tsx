@@ -6,10 +6,11 @@ interface NavLink {
 }
 
 const navLinks: NavLink[] = [
-  { href: "#sobre-mi", label: "Sobre mí" },
-  { href: "#lenguajes", label: "Lenguajes" },
+  { href: "#inicio", label: "Sobre mí" },
+  { href: "#techStack", label: "Tech Stack" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#certificaciones", label: "Certificaciones" },
+  { href: "#contacto", label: "Contacto" },
 ];
 
 export default function Navbar() {

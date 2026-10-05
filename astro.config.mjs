@@ -10,8 +10,8 @@ export default defineConfig({
   integrations: [react(), tailwind()],
   vite: {
     optimizeDeps: {
-      include: ['react', 'react-dom']
-    }
+      include: ['react', 'react-dom/client'],
+    },
   },
   site: 'https://RyuheiRG.github.io',
 });

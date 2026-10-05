@@ -1,0 +1,52 @@
+---
+import SectionTitle from '@/components/ui/SectionTitle.astro'
+import { Image } from 'astro:assets'
+import githubIcon from '@/assets/GitHub.png'
+import linkedinIcon from '@/assets/LinkedIn.png'
+import { siteConfig } from '@/config/site'
+---
+
+<section id="contacto" class="scroll-mt-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <SectionTitle id="titulo-contacto" title="Contacto" />
+    <p class="mt-2 max-w-2xl text-fg-secondary">
+      Conectemos: puedes encontrarme en LinkedIn y GitHub.
+    </p>
+    <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+      <a
+        href={siteConfig.links.linkedin}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex min-h-14 items-center gap-4 rounded-md border border-border bg-secondary px-5 py-3 transition-colors duration-200 hover:border-accent"
+      >
+        <Image
+          src={linkedinIcon}
+          alt=""
+          width={32}
+          height={32}
+          class="h-8 w-8 object-contain"
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="font-mono text-sm">LinkedIn</span>
+      </a>
+      <a
+        href={siteConfig.links.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex min-h-14 items-center gap-4 rounded-md border border-border bg-secondary px-5 py-3 transition-colors duration-200 hover:border-accent"
+      >
+        <Image
+          src={githubIcon}
+          alt=""
+          width={32}
+          height={32}
+          class="h-8 w-8 object-contain"
+          loading="lazy"
+          decoding="async"
+        />
+        <span class="font-mono text-sm">GitHub</span>
+      </a>
+    </div>
+  </div>
+</section>
