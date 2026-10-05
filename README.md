@@ -1,43 +1,71 @@
-# Astro Starter Kit: Minimal
+# Portafolio de Ricardo Reyes Gomez
+
+Portafolio personal de **Ricardo Reyes Gomez (RyuheiRG)**. Presenta su perfil como desarrollador de software Full Stack, sus habilidades, proyectos y certificaciones, con un enfoque en código limpio, seguridad y arquitectura de aplicaciones.
+
+## Contenido
+
+- **Sobre mí:** presentación y enfoque profesional.
+- **Lenguajes y tecnologías:** JavaScript, TypeScript, Python, C++, React, Node.js, Astro, Docker, bases de datos y herramientas de desarrollo.
+- **Proyectos:** enlaces a repositorios destacados, descripción y tecnologías utilizadas.
+- **Certificaciones y cursos:** formación en sistemas operativos, redes, IoT y fundamentos de AWS.
+
+## Tecnologías
+
+- [Astro](https://astro.build/) para generar un sitio estático.
+- [React](https://react.dev/) para la navegación interactiva.
+- [Tailwind CSS](https://tailwindcss.com/) para los estilos.
+- TypeScript y [Sharp](https://sharp.pixelplumbing.com/) para soporte de tipos y optimización de imágenes.
+
+El sitio prioriza el contenido estático y limita la hidratación de React a la barra de navegación.
+
+## Requisitos
+
+- Node.js `>=22.12.0`
+- pnpm `12.6.0` (versión declarada en `package.json`)
+
+## Desarrollo local
+
+Desde la raíz del repositorio:
 
 ```sh
-pnpm create astro@latest -- --template minimal
+pnpm install
+pnpm dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Abre [http://localhost:4321](http://localhost:4321) para ver el sitio durante el desarrollo.
 
-## 🚀 Project Structure
+## Comandos
 
-Inside of your Astro project, you'll see the following folders and files:
+| Comando        | Descripción                             |
+| -------------- | --------------------------------------- |
+| `pnpm dev`     | Inicia el servidor de desarrollo.       |
+| `pnpm check`   | Ejecuta `astro check` y `tsc --noEmit`. |
+| `pnpm build`   | Genera el sitio estático en `dist/`.    |
+| `pnpm preview` | Sirve localmente la versión generada.   |
+
+## Estructura del proyecto
 
 ```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+src/
+├── assets/                 # Fotografías, logotipo e iconos
+├── components/
+│   ├── react/              # Componentes interactivos de React
+│   ├── sections/           # Secciones del portafolio en Astro
+│   └── ui/                 # Componentes visuales reutilizables
+├── config/site.ts          # Metadatos y configuración del sitio
+├── layouts/BaseLayout.astro # Plantilla HTML, SEO y estilos globales
+├── pages/                  # Página principal, 404, robots.txt y sitemap
+└── styles/global.css       # Tokens de diseño y estilos base
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Despliegue
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+El proyecto genera un sitio estático y está configurado para GitHub Pages en la ruta `/LandingPageTopicosU3/`. La URL pública configurada es [https://RyuheiRG.github.io/LandingPageTopicosU3/](https://RyuheiRG.github.io/LandingPageTopicosU3/).
 
-Any static assets, like images, can be placed in the `public/` directory.
+Para generar los archivos de producción:
 
-## 🧞 Commands
+```sh
+pnpm build
+```
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+El resultado se crea en `dist/`. La configuración del sitio y su ruta base están definidas en `astro.config.mjs` y `src/config/site.ts`.
