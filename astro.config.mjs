@@ -1,5 +1,17 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import react from '@astrojs/react';
+import tailwind from '@astrojs/tailwind';
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  output: 'static',
+  base: '/LandingPageTopicosU3/',
+  integrations: [react(), tailwind()],
+  vite: {
+    optimizeDeps: {
+      include: ['react', 'react-dom']
+    }
+  },
+  site: 'https://RyuheiRG.github.io',
+});

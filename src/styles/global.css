@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --text-primary: #f4f1ec;
+    --text-secondary: #c9c6c1;
+    --accent: #fbcfe8;
+    --accent-hover: #fdf2f8;
+    --border: #262626;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-primary text-primary antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+    min-height: 100vh;
+  }
+
+  a {
+    @apply text-accent hover:text-accent-hover transition-colors duration-200;
+  }
+
+  a:focus-visible,
+  button:focus-visible {
+    @apply outline outline-2 outline-accent outline-offset-4;
+  }
+}
+
+@layer utilities {
+  .bg-primary {
+    background-color: var(--bg-primary);
+  }
+  .bg-secondary {
+    background-color: var(--bg-secondary);
+  }
+  .text-primary {
+    color: var(--text-primary);
+  }
+  .text-secondary {
+    color: var(--text-secondary);
+  }
+  .text-accent {
+    color: var(--accent);
+  }
+  .text-accent-hover {
+    color: var(--accent-hover);
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+  .border-accent {
+    border-color: var(--accent);
+  }
+}

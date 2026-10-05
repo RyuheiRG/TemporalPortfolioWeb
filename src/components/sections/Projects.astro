@@ -1,0 +1,57 @@
+---
+import SectionTitle from '@/components/ui/SectionTitle.astro'
+
+const projects = [
+  {
+    title: 'frame-data-bayes',
+    description:
+      'Desarrollé Frame-Data-Bayes, un motor de análisis probabilístico y clasificación estadística desarrollado bajo estándares de Clean Code y mentalidad Zero Trust. El sistema trata cada dataset como un entorno hostil: valida superficies de entrada, detecta tipos de datos de forma determinística y aplica inferencia bayesiana para predecir eventos anómalos.',
+    link: 'https://github.com/RyuheiRG/frame-data-bayes',
+    tech: ['Python', 'Pandas', 'NumPy', 'Scikit-Learn', 'Streamlit', 'Matplotlib', 'Seaborn'],
+  },
+  {
+    title: 'Event-Manager-Vite',
+    description:
+      'Migré una app creada con CRA a Vite. Event Manager es una aplicación para la gestión de eventos, desarrollada en React con TypeScript. Permite a los usuarios agregar, visualizar y eliminar eventos, mostrando detalles como nombre, fecha, hora y descripción del evento.',
+    link: 'https://github.com/RyuheiRG/Event-Manager-Vite',
+    tech: ['React', 'TypeScript', 'Vite', 'Redux Toolkit', 'MUI', 'Formik', 'Yup'],
+  },
+  {
+    title: 'API-Rest-Cyber_LinKuei',
+    description: 'Desarrollé una API Rest de los Cyber Lin Kuei.',
+    link: 'https://github.com/RyuheiRG/API-Rest-Cyber_LinKuei',
+    tech: ['Node.js', 'TypeScript', 'Express.js'],
+  },
+]
+---
+
+<section id="proyectos" class="scroll-mt-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+    <SectionTitle id="titulo-proyectos" title="Mis Proyectos" />
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mt-8">
+      {
+        projects.map((project) => (
+          <article class="flex flex-col overflow-hidden rounded-md border border-border bg-secondary transition-all duration-200 hover:-translate-y-1 hover:border-accent">
+            <div class="flex h-full flex-col p-6">
+              <h3 class="mb-3 text-xl font-semibold break-words">{project.title}</h3>
+              <p class="mb-6 flex-grow text-sm text-fg-secondary">{project.description}</p>
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mb-4 w-fit text-sm font-semibold text-accent hover:text-accent-hover hover:underline"
+              >
+                Repositorio
+              </a>
+              <ul class="flex flex-wrap gap-x-3 gap-y-2 font-mono text-xs text-accent">
+                {project.tech.map((tech) => (
+                  <li>{tech}</li>
+                ))}
+              </ul>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
