@@ -10,6 +10,7 @@ export const siteConfig = {
   links: {
     linkedin: 'https://www.linkedin.com/in/ryuhei-rg/',
     github: 'https://github.com/RyuheiRG',
+    steam: 'https://steamcommunity.com/id/RyuheiRG/',
   },
   author: {
     name: 'Ricardo Reyes Gomez',

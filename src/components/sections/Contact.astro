@@ -7,17 +7,18 @@ import { siteConfig } from '@/config/site'
 ---
 
 <section id="contacto" class="scroll-mt-20">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+  <div class="section-frame mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <p class="eyebrow mb-3">Open channel / 05</p>
     <SectionTitle id="titulo-contacto" title="Contacto" />
-    <p class="mt-2 max-w-2xl text-fg-secondary">
-      Conectemos: puedes encontrarme en LinkedIn y GitHub.
+    <p class="mt-2 max-w-2xl text-lg text-fg-secondary">
+      ¿Tienes una idea, una pregunta o simplemente quieres conectar? Encuéntrame aquí.
     </p>
-    <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+    <div class="mt-8 grid gap-3 sm:grid-cols-3">
       <a
         href={siteConfig.links.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex min-h-14 items-center gap-4 rounded-md border border-border bg-secondary px-5 py-3 transition-colors duration-200 hover:border-accent"
+        class="panel-card flex min-h-24 items-center gap-4 px-5 py-4"
       >
         <Image
           src={linkedinIcon}
@@ -28,13 +29,16 @@ import { siteConfig } from '@/config/site'
           loading="lazy"
           decoding="async"
         />
-        <span class="font-mono text-sm">LinkedIn</span>
+        <span>
+          <span class="block font-mono text-sm">LinkedIn</span>
+          <span class="mt-1 block text-xs text-fg-secondary">Professional network ↗</span>
+        </span>
       </a>
       <a
         href={siteConfig.links.github}
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex min-h-14 items-center gap-4 rounded-md border border-border bg-secondary px-5 py-3 transition-colors duration-200 hover:border-accent"
+        class="panel-card flex min-h-24 items-center gap-4 px-5 py-4"
       >
         <Image
           src={githubIcon}
@@ -45,7 +49,22 @@ import { siteConfig } from '@/config/site'
           loading="lazy"
           decoding="async"
         />
-        <span class="font-mono text-sm">GitHub</span>
+        <span>
+          <span class="block font-mono text-sm">GitHub</span>
+          <span class="mt-1 block text-xs text-fg-secondary">Code & projects ↗</span>
+        </span>
+      </a>
+      <a
+        href={siteConfig.links.steam}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="panel-card flex min-h-24 items-center gap-4 px-5 py-4"
+      >
+        <span class="grid h-8 w-8 shrink-0 place-items-center border border-border font-mono text-sm text-accent" aria-hidden="true">S</span>
+        <span>
+          <span class="block font-mono text-sm">Steam</span>
+          <span class="mt-1 block text-xs text-fg-secondary">Gaming profile ↗</span>
+        </span>
       </a>
     </div>
   </div>

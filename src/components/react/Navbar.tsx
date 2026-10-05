@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import logo from "@/assets/ryuhei-logo.png";
 
 interface NavLink {
   href: string;
@@ -56,26 +57,27 @@ export default function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-50 bg-primary/95 border-b border-border backdrop-blur-md"
+      className="site-nav fixed left-0 right-0 top-0 z-50 border-b border-border backdrop-blur-xl"
       aria-label="Navegación principal"
     >
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-20">
+      <div className="mx-auto flex h-[4.5rem] max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <a
           href="#inicio"
-          className="inline-flex items-center"
-          aria-label="Ir al inicio"
+          className="group inline-flex items-center gap-3"
+          aria-label="RyuheiRG, ir al inicio"
         >
           <img
-            src="\src\assets\ryuhei-logo.png"
+            src={logo.src}
             alt="Logo de RyuheiRG"
-            className="w-11 h-11 object-contain"
+            className="h-9 w-9 object-contain transition-transform duration-200 group-hover:rotate-[-6deg]"
           />
+          <span className="font-mono text-sm font-semibold tracking-wide">Ryuhei<span className="text-accent">RG</span></span>
         </a>
 
         <button
           ref={buttonRef}
           type="button"
-          className="inline-grid w-11 h-11 place-content-center gap-1.5 border border-border rounded-sm hover:border-accent transition-colors duration-200 md:hidden"
+          className="inline-grid h-11 w-11 place-content-center gap-1.5 border border-border transition-colors duration-200 hover:border-accent md:hidden"
           aria-expanded={isOpen}
           aria-controls="nav-links"
           aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
@@ -98,13 +100,13 @@ export default function Navbar() {
         <ul
           ref={menuRef}
           id="nav-links"
-          className={`absolute top-full left-0 right-0 flex flex-col gap-0 px-4 py-2 border-b border-border bg-primary md:static md:flex-row md:gap-8 md:px-0 md:py-0 md:border-0 md:bg-transparent ${isOpen ? "flex" : "hidden md:flex"}`}
+          className={`absolute left-0 right-0 top-full flex flex-col gap-0 border-b border-border bg-primary px-4 py-2 md:static md:flex-row md:items-center md:gap-7 md:border-0 md:bg-transparent md:px-0 md:py-0 ${isOpen ? "flex" : "hidden md:flex"}`}
         >
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
-                className="block py-3 text-fg-secondary hover:text-accent transition-colors duration-200 md:py-2 md:text-sm"
+                className="block py-3 font-mono text-xs text-fg-secondary transition-colors duration-200 hover:text-accent md:py-2"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}

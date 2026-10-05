@@ -16,10 +16,10 @@ const {
   ...rest
 } = Astro.props
 
-const baseClasses = 'inline-flex items-center justify-center min-h-[2.75rem] px-5 py-2.5 text-sm font-semibold rounded-sm transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent'
+const baseClasses = 'inline-flex items-center justify-center min-h-[2.75rem] px-5 py-2.5 text-sm font-semibold rounded-none transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent'
 
 const variantClasses = {
-  primary: 'border border-accent text-accent hover:text-accent-hover hover:bg-accent/10 hover:-translate-y-0.5',
+  primary: 'border border-accent bg-accent text-primary hover:border-accent-hover hover:bg-accent-hover hover:-translate-y-0.5',
   ghost: 'text-fg-secondary hover:text-accent',
 }
 

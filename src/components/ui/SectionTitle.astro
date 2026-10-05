@@ -9,12 +9,8 @@ const { id, title, className = '' } = Astro.props
 ---
 
 <h2
-  class={`relative inline-block mb-7 text-2xl sm:text-3xl font-semibold ${className}`}
+  class={`section-heading relative inline-block text-3xl font-semibold tracking-tight sm:text-4xl ${className}`}
   id={id}
 >
   {title}
-  <span
-    class="absolute -bottom-2 left-0 w-full h-[3px] bg-accent"
-    aria-hidden="true"
-  ></span>
 </h2>

@@ -8,7 +8,7 @@ Portafolio personal de **Ricardo Reyes Gomez (RyuheiRG)**. Presenta su perfil co
 - **Lenguajes y tecnologías:** JavaScript, TypeScript, Python, C++, React, Node.js, Astro, Docker, bases de datos y herramientas de desarrollo.
 - **Proyectos:** enlaces a repositorios destacados, descripción y tecnologías utilizadas.
 - **Certificaciones y cursos:** formación en sistemas operativos, redes, IoT y fundamentos de AWS.
-- **Contacto:** enlaces a LinkedIn y GitHub.
+- **Contacto:** enlaces a LinkedIn, GitHub y Steam.
 
 ## Tecnologías
 

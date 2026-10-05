@@ -26,26 +26,31 @@ const projects = [
 ---
 
 <section id="proyectos" class="scroll-mt-20">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+  <div class="section-frame mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <p class="eyebrow mb-3">Selected work / 03</p>
     <SectionTitle id="titulo-proyectos" title="Mis Proyectos" />
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6 mt-8">
+    <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
       {
-        projects.map((project) => (
-          <article class="flex flex-col overflow-hidden rounded-md border border-border bg-secondary transition-all duration-200 hover:-translate-y-1 hover:border-accent">
-            <div class="flex h-full flex-col p-6">
-              <h3 class="mb-3 text-xl font-semibold break-words">{project.title}</h3>
-              <p class="mb-6 flex-grow text-sm text-fg-secondary">{project.description}</p>
+        projects.map((project, index) => (
+          <article class="panel-card flex min-h-full flex-col p-6">
+            <div class="mb-8 flex items-center justify-between font-mono text-xs text-fg-secondary">
+              <span>PROJECT / 0{index + 1}</span>
+              <span class="text-accent" aria-hidden="true">↗</span>
+            </div>
+            <h3 class="mb-3 break-words text-xl font-semibold tracking-tight">{project.title}</h3>
+            <p class="mb-6 flex-grow text-sm leading-relaxed text-fg-secondary">{project.description}</p>
+            <div class="mt-auto border-t border-border pt-5">
               <a
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                class="mb-4 w-fit text-sm font-semibold text-accent hover:text-accent-hover hover:underline"
+                class="mb-5 inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-hover"
               >
-                Repositorio
+                Ver repositorio <span aria-hidden="true">↗</span>
               </a>
-              <ul class="flex flex-wrap gap-x-3 gap-y-2 font-mono text-xs text-accent">
+              <ul class="flex flex-wrap gap-2 font-mono text-[0.68rem] text-fg-secondary">
                 {project.tech.map((tech) => (
-                  <li>{tech}</li>
+                  <li class="border border-border px-2 py-1">{tech}</li>
                 ))}
               </ul>
             </div>

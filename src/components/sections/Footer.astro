@@ -3,9 +3,15 @@ const currentYear = new Date().getFullYear()
 ---
 
 <footer class="border-t border-border">
-  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-center">
-    <p class="text-sm text-fg-secondary">
-      &copy; {currentYear} Ricardo Reyes Gomez. Diseñado y desarrollado desde cero.
+  <div class="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8">
+    <a href="#inicio" class="font-mono text-sm font-semibold tracking-wide">
+      Ryuhei<span class="text-accent">RG</span>
+    </a>
+    <p class="font-mono text-xs text-fg-secondary">
+      &copy; {currentYear} Ricardo Reyes Gomez <span class="px-2 text-accent">/</span> Built with intent.
     </p>
+    <a href="#inicio" class="font-mono text-xs text-fg-secondary hover:text-accent">
+      Back to top ↑
+    </a>
   </div>
 </footer>
