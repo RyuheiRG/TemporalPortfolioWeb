@@ -6,7 +6,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
-  base: '/LandingPageTopicosU3/',
+  base: '/TemporalPortfolioWeb/',
   integrations: [react(), tailwind()],
   vite: {
     optimizeDeps: {

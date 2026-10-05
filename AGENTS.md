@@ -9,7 +9,7 @@
 ## Architecture
 
 - **Stack**: Astro 7 + React 19 + Tailwind CSS 3, static output.
-- **Deploy target**: GitHub Pages — `base: '/LandingPageTopicosU3/'`, `site: https://RyuheiRG.github.io` in `astro.config.mjs`. Astro applies base to internal links/assets automatically.
+- **Deploy target**: GitHub Pages — `base: '/TemporalPortfolioWeb/'`, `site: https://RyuheiRG.github.io` in `astro.config.mjs`. Astro applies base to internal links/assets automatically. Deployment is handled by `.github/workflows/deploy.yml`.
 - **Images**: Use `astro:assets` with files in `src/assets/` (provide `width/height`, prefer `loading="lazy"` and `decoding="async"`). `sharp` is installed.
 - **Islands**: Minimal hydration — only `Navbar` (React) uses `client:load`. All other sections/components are `.astro`.
 - **Styling**: Tailwind-first with CSS tokens in `src/styles/global.css` (rosa pastel + negro puro). Theme extended in `tailwind.config.mjs`.

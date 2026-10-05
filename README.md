@@ -60,7 +60,7 @@ src/
 
 ## Despliegue
 
-El proyecto genera un sitio estático y está configurado para GitHub Pages en la ruta `/LandingPageTopicosU3/`. La URL pública configurada es [https://RyuheiRG.github.io/LandingPageTopicosU3/](https://RyuheiRG.github.io/LandingPageTopicosU3/).
+El proyecto genera un sitio estático y está configurado para GitHub Pages en la ruta `/TemporalPortfolioWeb/`. La URL pública configurada es [https://RyuheiRG.github.io/TemporalPortfolioWeb/](https://RyuheiRG.github.io/TemporalPortfolioWeb/).
 
 Para generar los archivos de producción:
 
@@ -68,4 +68,4 @@ Para generar los archivos de producción:
 pnpm build
 ```
 
-El resultado se crea en `dist/`. La configuración del sitio y su ruta base están definidas en `astro.config.mjs` y `src/config/site.ts`.
+El resultado se crea en `dist/`. El workflow de GitHub Actions compila con Astro y publica ese directorio en GitHub Pages. La configuración del sitio y su ruta base están definidas en `astro.config.mjs` y `src/config/site.ts`.
